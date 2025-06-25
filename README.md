@@ -1,6 +1,7 @@
 # Exercício: Ímpar ou Par
 
 Apenas um exercício para calcular se um número é ímpar ou par.
+Número máximo até hoje: 71236
 
 🥸
 
@@ -14,26 +15,37 @@ Me inspirei após ver o video do `@ThePrime`, que é um react do código do `@je
 - Artigo: https://andreasjhkarlsson.github.io/jekyll/update/2023/12/27/4-billion-if-statements.html
 
 
-Aprecie...
+## Como rodar
 
-``` python
-elif numero == 71231: 
-    print("O número 71231 é ímpar.")
-        
-elif numero == 71232: 
-    print("O número 71232 é par.")
-        
-elif numero == 71233: 
-    print("O número 71233 é ímpar.")
-        
-elif numero == 71234: 
-    print("O número 71234 é par.")
-        
-elif numero == 71235: 
-    print("O número 71235 é ímpar.")
-        
-elif numero == 71236: 
-    print("O número 71236 é par.")
-        
+Por conta do `impar-ou-par.py` ser um arquivo muito grande, o python retorna:
+> MemoryError: Parser stack overflowed - Python source too complex to parse
+
+
+Então para rodar o código, execute o `run.py`
+
+
+#### Como funciona o run.py
+
+O `run.py` basicamente verifica se o arquivo `impar-ou-par.py` é válido e depois executa a primeira linha dele:
+
+```python
+#impar-ou-par.py
+numero = int(input("Digite um número: "))
 ```
+
+Então percorre o `impar-ou-par.py` até encontrar o bloco `elif` respectivo ao número que o usuário informou e o executa.
+
+```python
+#Numero informado pelo user == 65971
+#run.py percorre o arquivo até encontrar o bloco correto e o executa.
+
+...
+
+elif numero == 65971: 
+    print("O número 65971 é ímpar.")
+
+...
+```
+
+Caso o número informado pelo user não esteja presente em nenhum bloco `elif`, o código executa o `else` no final do arquivo `impar-ou-par.py`
 
