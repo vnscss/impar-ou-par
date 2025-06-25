@@ -16,10 +16,18 @@ def generate(r1 , r2):
         else:
             string = 'ímpar'
 
+        innerString = ''
+
+        if i == 0:
+            innerString = 'if'
+        elif i != 0:
+            innerString = 'elif'
+
+
         text = '''
-if numero == {i}: 
+{innerString} numero == {i}: 
     print("O número {i} é {string}.")
-        '''.format(i=i, string=string)
+        '''.format(i=i, string=string , innerString=innerString)
 
 
         with open("impar-ou-par.py", "a") as myfile:
@@ -43,4 +51,11 @@ elif mode == 2:
         generate(i , i +1 )
         i += 1
         atualBytes = os.path.getsize('./impar-ou-par.py')
+
+
+with open("impar-ou-par.py", "a") as myfile:
+    myfile.write('''
+else:
+    print(f"Não é possivel determinar se {numero} é um número ímpar ou par. :(  ")
+    ''')
 
