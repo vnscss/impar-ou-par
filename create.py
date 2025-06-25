@@ -36,7 +36,13 @@ numero = int(input("Digite um número: "))
     ''')
 
 
-mode = int(input("1 para breakpoint, 2 para tamanho em esperado: "))
+mode = int(input("""
+
+Digite o modo de geração:
+1 - Breakpoint
+2 - Tamanho esperado (em bytes)
+
+: """))
 
 if mode == 1:
     breakpoint = int(input("Digite o breakpoint: "))
