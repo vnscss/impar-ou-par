@@ -1,10 +1,6 @@
 import os
 import sys
 
-with open("impar-ou-par.py", "a") as myfile:
-    myfile.write('''
-numero = int(input("Digite um número: "))
-    ''')
 
 def generate(r1 , r2):
     for i in range(r1 , r2):
@@ -33,8 +29,14 @@ def generate(r1 , r2):
         with open("impar-ou-par.py", "a") as myfile:
             myfile.write(text)
 
-mode = int(input("1 para breakpoint, 2 para tamanho em esperado: "))
 
+with open("impar-ou-par.py", "a") as myfile:
+    myfile.write('''
+numero = int(input("Digite um número: "))
+    ''')
+
+
+mode = int(input("1 para breakpoint, 2 para tamanho em esperado: "))
 
 if mode == 1:
     breakpoint = int(input("Digite o breakpoint: "))
