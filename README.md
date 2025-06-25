@@ -49,3 +49,36 @@ elif numero == 65971:
 
 Caso o número informado pelo user não esteja presente em nenhum bloco `elif`, o código executa o `else` no final do arquivo `impar-ou-par.py`
 
+## Como gerar o arquivo impar-ou-par.py
+
+Para gerar um arquivo `impar-ou-par.py` execute o script `create.py`.
+
+Existem dois modos de geração:
+
+- Breakpoint: Informe até que número inteiro o script `impar-ou-par.py` irá verificar.
+- Tamanho esperado: Informe em bytes o tamanho esperado que o arquivo `impar-ou-par.py` deverá ter.
+
+
+```bash
+
+Digite o modo de geração:
+1 - Breakpoint
+2 - Tamanho esperado (em bytes)
+
+```
+
+Após escolher o modo, o script pedirá o input do tamanho esperado ou do breakpoint.
+
+
+```bash
+
+Digite o modo de geração:
+1 - Breakpoint
+2 - Tamanho esperado (em bytes)
+
+: 1 #user escolheu o modo 1 
+
+Digite o breakpoint: 9999999 #breakpoint escolhido pelo user
+```
+
+Pronto! O arquivo `impar-ou-par.py` estará disponível para ser apreciado 🥸 .
